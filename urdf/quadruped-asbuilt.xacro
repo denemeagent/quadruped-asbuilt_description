@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="quadruped-asbuilt" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find quadruped-asbuilt_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find quadruped-asbuilt_description)/urdf/quadruped-asbuilt.trans" />
+<xacro:include filename="$(find quadruped-asbuilt_description)/urdf/quadruped-asbuilt.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.00018683630752087743 -0.00534356428814258 -0.0013851406731959794" rpy="0 0 0"/>
+    <mass value="2.8550169614336"/>
+    <inertia ixx="0.021554" iyy="0.022632" izz="0.003036" ixy="-1e-05" iyz="-1e-05" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quadruped-asbuilt_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quadruped-asbuilt_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
